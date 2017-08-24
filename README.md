@@ -11,7 +11,8 @@
         
         NSLog(@"src:%@->stringByAppendingString:%@\n",ns,newNs1);
         
-        NSString* newNs2=[ns stringByReplacingOccurrencesOfString:@"123" withString:@"xxxXX"];//凡是123的都替换成
+        NSString* newNs2=[ns stringByReplacingOccurrencesOfString:@"123" withString:@"xxxXX"];
+        //凡是123的都替换成XXX
         
         //xxx 并产生一个新的字符串
         NSLog(@"src:%@->stringByReplacingOccurrencesOfString:%@\n",ns,newNs2);
@@ -28,8 +29,10 @@
         NSRange range2;
         range2.location=0;
         range2.length=3;
-        //option 是替换的规则 比如从后面开始 或者设置锚点  检索字符串 替换设置好的字符串 用规定的字符串进行替换 并且可以规定他的范围
-        NSString* newNs4=[ns stringByReplacingOccurrencesOfString:@"123" withString:@"***" options:0 range:range2];
+        //option 是替换的规则 比如从后面开始 或者设置锚点  
+        //检索字符串 替换设置好的字符串 用规定的字符串进行替换 并且可以规定他的范围
+        NSString* newNs4=[ns stringByReplacingOccurrencesOfString:@"123" 
+        withString:@"***" options:0 range:range2];
         NSLog(@"src:%@->stringByReplacingOccurrencesOfString:%@\n",ns,newNs4);
         
         
